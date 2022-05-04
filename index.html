@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/imports.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/player-bar.css">
+    <link rel="stylesheet" href="css/side-bar.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Spotifyapp</title>
+</head>
+<body>
+    <div id="app-container" class="row row-vertical">
+            <div class="col grow-1 overflow row">
+
+                    <!-- Side-bar -->
+                    <div id="side-bar" class="col shrink-0 overflow row row-vertical  relative-container">
+                        
+                            <div class="col grow-1 overflow row row-vertical overflow">
+                                <!-- LOGO -->
+                                <div class="col shrink-0">
+                                    <div class="logo-container row align-center">
+                                        <img src="img/logo.svg" alt="">
+                                    </div>
+                                </div>
+
+                                <!-- Home - Find - Library -->
+                                <div class="col shrink-0 nav-menu">
+                                    <div class="nav-item row align-center text-less-white">
+                                        <div class="green-vertical-bar">
+                                            
+                                        </div>
+                                        <div class="icon-container row align-center">
+                                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="home-svg nav-icon">
+                                                <path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                                                    fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="nav-menu-text row align-center">
+                                            Home
+                                        </div>
+                                    </div>
+                                    <div class="nav-item row align-center text-gray">
+                                        <div class="icon-container row align-center">
+                                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="nav-icon">
+                                                <path
+                                                    d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                                                    fill="currentColor" fill-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div class="nav-menu-text row align-center">
+                                            Cerca
+                                        </div>
+                                    </div>
+                                    <div class="nav-item row align-center text-gray">
+                                        <div class="icon-container row align-center">
+                                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="nav-icon">
+                                                <path
+                                                    d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                                                    fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <div class="nav-menu-text row align-center">
+                                            La tua libreria
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Playlist-Menu -->
+                                <div class="col grow-1 playlist-menu row row-vertical">
+                                    <div class="col">
+                                        <h5 class="col">PLAYLIST</h5>
+                                    </div>
+                                    
+                                    <div class="col shrink-0 row add-playlist-menu align-center">
+                                        <div class="add-playlist col shrink-0 row align-center ">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                        <div class="add-playlist-text col grow-1 shrink-0 row align-center text-gray">
+                                            Crea Playlist
+                                        </div>
+                                    </div>
+                                    <div class="col grow-1 overflow-auto">
+                                        <ul>
+                                            <li class="text-gray">Nome Playlist</li>
+                                            <li class="text-gray">Nome Playlist</li>
+                                            <li class="text-gray">Nome Playlist</li>
+                                            <li class="text-gray">Nome Playlist</li>
+                                            <li class="text-gray">Nome Playlist</li>
+                                            <li class="text-gray">Nome Playlist</li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+
+                                <!-- Bottom - User -->
+                                <div class="col shrink-0">
+                                    <div class="row text-gray download-container align-center">
+                                        <div class="col shrink-0 row align-center">
+                                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="dwn-load-icon">
+                                                <title>Download icon</title>
+                                                <path
+                                                    d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z"
+                                                    fill="currentColor" fill-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div class="dwn-load-text col grow-1 row align-center">
+                                            Installa app
+                                        </div>
+                                    </div>
+                                    <div class="gray-line">
+                                    </div>
+                                    <div class="row text-less-white username-container">
+                                        <div class="user-icon col shrink-0 row align-center">
+                                            <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg" class="user-icon">
+                                                <title>User Icon</title>
+                                                <path
+                                                    d="M67.74 61.78l-14.5-8.334c-.735-.422-1.24-1.145-1.385-1.98-.145-.835.088-1.685.638-2.33l5.912-6.93c3.747-4.378 5.81-9.967 5.81-15.737v-2.256c0-6.668-2.792-13.108-7.658-17.67C51.622 1.92 45.17-.386 38.392.054c-12.677.82-22.607 11.772-22.607 24.934v1.483c0 5.77 2.063 11.36 5.81 15.736l5.912 6.933c.55.644.783 1.493.638 2.33-.143.834-.648 1.556-1.383 1.98l-14.494 8.33C4.7 66.077 0 74.15 0 82.844v6.76h3.333v-6.76c0-7.5 4.055-14.46 10.59-18.174l14.5-8.334c1.597-.918 2.692-2.487 3.007-4.302.315-1.815-.19-3.66-1.387-5.06l-5.913-6.936c-3.23-3.775-5.01-8.594-5.01-13.57v-1.484c0-11.41 8.562-20.9 19.488-21.608 5.85-.377 11.415 1.61 15.67 5.598 4.26 3.992 6.605 9.404 6.605 15.24v2.254c0 4.976-1.778 9.796-5.01 13.57l-5.915 6.935c-1.195 1.4-1.7 3.246-1.386 5.06.313 1.816 1.41 3.385 3.008 4.303l14.507 8.338c6.525 3.71 10.58 10.67 10.58 18.17v6.76H80v-6.76c0-8.695-4.7-16.768-12.26-21.063z"
+                                                    fill="currentColor" fill-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div class="user-name-text col grow-1 row align-center">
+                                            John Doe
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div id="side-bar" class="hided col shrink-0 overflow row row-vertical  relative-container">
+                        
+                        <div class="col grow-1 overflow row row-vertical overflow align-center">
+
+                            <!-- LOGO -->
+                            <div class="col shrink-0">
+                                <div class="logo-container row align-center justify-center">
+                                    <img src="img/logo-small.svg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- Home - Find - Library -->
+                            <div class="col shrink-0 nav-menu">
+                                <div class="nav-item row align-center text-less-white">
+                                    <div class="green-vertical-bar">
+                                        
+                                    </div>
+                                    <div class="icon-container row align-center">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="home-svg nav-icon">
+                                            <path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                                                fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="nav-item row align-center text-gray">
+                                    <div class="icon-container row align-center">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="nav-icon">
+                                            <path
+                                                d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                                                fill="currentColor" fill-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="nav-item row align-center text-gray">
+                                    <div class="icon-container row align-center">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="nav-icon">
+                                            <path
+                                                d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                                                fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Empty space filler -->
+                            <div class="col grow-1 playlist-menu row row-vertical">
+                            </div>
+
+                            <!-- Bottom - User -->
+                            <div class="col shrink-0">
+                                <div class="row text-gray download-container align-center">
+                                    <div class="col shrink-0 row align-center">
+                                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="dwn-load-icon">
+                                            <title>Download icon</title>
+                                            <path
+                                                d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z"
+                                                fill="currentColor" fill-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="gray-line">
+                                </div>
+                                <div class="row text-less-white username-container">
+                                    <div class="user-icon col shrink-0 row align-center">
+                                        <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg" class="user-icon">
+                                            <title>User Icon</title>
+                                            <path
+                                                d="M67.74 61.78l-14.5-8.334c-.735-.422-1.24-1.145-1.385-1.98-.145-.835.088-1.685.638-2.33l5.912-6.93c3.747-4.378 5.81-9.967 5.81-15.737v-2.256c0-6.668-2.792-13.108-7.658-17.67C51.622 1.92 45.17-.386 38.392.054c-12.677.82-22.607 11.772-22.607 24.934v1.483c0 5.77 2.063 11.36 5.81 15.736l5.912 6.933c.55.644.783 1.493.638 2.33-.143.834-.648 1.556-1.383 1.98l-14.494 8.33C4.7 66.077 0 74.15 0 82.844v6.76h3.333v-6.76c0-7.5 4.055-14.46 10.59-18.174l14.5-8.334c1.597-.918 2.692-2.487 3.007-4.302.315-1.815-.19-3.66-1.387-5.06l-5.913-6.936c-3.23-3.775-5.01-8.594-5.01-13.57v-1.484c0-11.41 8.562-20.9 19.488-21.608 5.85-.377 11.415 1.61 15.67 5.598 4.26 3.992 6.605 9.404 6.605 15.24v2.254c0 4.976-1.778 9.796-5.01 13.57l-5.915 6.935c-1.195 1.4-1.7 3.246-1.386 5.06.313 1.816 1.41 3.385 3.008 4.303l14.507 8.338c6.525 3.71 10.58 10.67 10.58 18.17v6.76H80v-6.76c0-8.695-4.7-16.768-12.26-21.063z"
+                                                fill="currentColor" fill-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+
+                    <!-- Main Content -->
+                    <div id="main-content" class="col grow-1 overflow-auto">
+
+                        <!-- Top Bar -->
+                        <div id="top-bar" class="relative-container">
+                            <div class="btn-container">
+                                <div class="button">EFFETTUA L'UPGRADE</div>
+                            </div>
+                        </div>
+
+                        <!-- Main navigation Bar-->
+                        <div class="main-nav-bar row wrap-on justify-center">
+                            <div class="shrink-0">
+                                <div class="text-gray relative-container">
+                                    IN EVIDENZA
+                                    <div class="green-horizontal-line"></div>
+                                </div>
+                            </div>
+                            <div class="shrink-0">
+                                <div class="text-gray">
+                                    PODCAST
+                                </div>
+                            </div>
+                            <div class="shrink-0">
+                                <div class="text-gray">
+                                    CLASSIFICHE
+                                </div>
+                            </div>
+                            <div class="shrink-0">
+                                <div class="text-gray">
+                                    GENERI E MOOD
+                                </div>
+                            </div>
+                            <div class="shrink-0">
+                                <div class="text-gray">
+                                    NUOVE USCITE
+                                </div>
+                            </div>
+                            <div class="shrink-0">
+                                <div class="text-gray">
+                                    SCOPRI
+                                </div>
+                             </div>
+                         </div>
+
+                         <!-- Recently-Played-Section -->
+                         <div class="recently-played">
+                             <h3>Recently played</h3>
+                             <div class="row wrap-on">
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/metal_lifting.jpg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Heavy Metal
+                                         </div>
+                                         <div class="sub-title">
+                                             Subtitle
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/stranger.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)
+                                         </div>
+                                         <div class="sub-title">
+                                             Kyle Dixon & Michael Stein
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/aquietplace.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             A quiet place
+                                         </div>
+                                         <div class="sub-title">
+                                             Subtitle
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/split.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Split
+                                         </div>
+                                         <div class="sub-title">
+                                             Subtitle
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/cure.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             A cure for wellness
+                                         </div>
+                                         <div class="sub-title">
+                                             Subtitle
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/sinister.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Sinister
+                                         </div>
+                                         <div class="sub-title">
+                                             Subtitle
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+
+                         <!-- Created-for-user -->
+                         <div class="recently-played">
+                             <h3>Creato per John Doe</h3>
+                             <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                             <div class="row wrap-on">
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/radar.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Release Radar
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img src="img/mixdaily.jpeg" alt="">
+                                             <div class="play-hover">
+                                                 <div class="play-border">
+                                                     <div class="play-icon">
+                                                         <i class="fa-solid fa-play"></i>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Daily Mix 1
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+
+                         <!-- Popular-Artists -->
+                         <div class="recently-played">
+                             <h3>Creato per John Doe</h3>
+                             <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                             <div class="row wrap-on">
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img class="circle-img" src="img/youg.jpeg" alt="">
+                                             <div class="play-hover">
+
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Lana Del Rey
+                                         </div>
+                                     </div>
+                                 </div>
+
+                                 <div class="main-col">
+                                     <div class="card">
+                                         <div class="img-container relative-container">
+                                             <img class="circle-img" src="img/einaudi.jpeg" alt="">
+                                             <div class="play-hover">
+
+                                             </div>
+                                         </div>
+                                         <div class="main-title">
+                                             Ludovico Einaudi
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+
+    
+          
+            
+    
+
+          
+    
+    
+  
+                        </div>
+                    </div>
+                
+            </div>
+
+            <!-- Player-bar -->
+            <div id="player-bar" class="col shrink-0 row align-center spc-btw">
+
+                <!-- Left-Side -->
+                <div class="col shrink-0 left-side row spc-btw align-center">
+                    <div class="col grow-1 row align-center text-less-white grow-0-600">
+                        <div class="img-container col shrink-0 width-600">
+                            <img src="img/sinister.jpeg" alt="">
+                        </div>
+                        <div class="col shrink-0 row row-vertical song-detail shrink-1-600">
+                            <div class="col shrink-0 song-name">
+                                Sinister
+                            </div>
+                            <div class="col shrink-0 artist-name">
+                                Artist Name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col row row-vertical-sm icon-flex-container">
+                        <div class="icon-container text-gray">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="icon-container text-gray">
+                            <i class="fa-regular fa-folder"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center-with-control-buttons -->
+                <div class="player-controller col grow-1 row row-vertical spc-btw">
+                    <div class="icons-bar col grow-1 row justify-center align-center">
+                        <div class="col">
+                            <div class="ctr-icon text-less-white">
+                                <i class="fa-solid fa-shuffle"></i>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ctr-icon text-less-white">
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="relative-container text-less-white play-border">
+                                <div class="ctr-icon play-icon text-less-white">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ctr-icon text-less-white">
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ctr-icon text-less-white">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="track-bar col grow-1 row spc-btw align-center">
+                        <div class="col shrink-0">
+                            <div class="time-display">
+                                0:25
+                            </div>
+                        </div>
+                        <div class="col grow-1">
+                            <div class="time-bar relative-container">
+                                <div class="progression-time-bar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col shrink-0">
+                            <div class="time-display">
+                                4:35
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right-Side -->
+                <div class="right-side col shrink-0 right-side row align-center">
+                    <div class="col shrink-0">
+                        <div class="icon-container text-gray">
+                            <i class="fa-solid fa-list"></i>
+                        </div>
+                    </div>
+                    <div class="col shrink-0">
+                        <div class="icon-container text-gray">
+                            <i class="fa-solid fa-display"></i>
+                        </div>
+                    </div>
+                    <div class="col shrink-0">
+                        <div class="icon-container text-gray">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                    </div>
+                    <div class="col grow-1 shrink-0">
+                        <div class="volume-bar relative-container">
+                            <div class="actual-volume-bar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</body>
+</html>

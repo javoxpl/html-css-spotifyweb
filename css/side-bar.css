@@ -1,0 +1,137 @@
+#side-bar {
+    background-color: var(--side-bar-bg);
+    min-width: var(--side-bar-width);
+    padding-left: var(--side-bar-padding-left);
+    padding-bottom: 0.4rem;
+}
+
+#side-bar .logo-container {
+    height: 65px;
+}
+
+#side-bar .logo-container img {
+    width: 60%;
+}
+
+#side-bar .icon-container {
+    height: var(--nav-item-height);
+}
+
+#side-bar .icon-container .nav-icon {
+    height: 65%;
+}
+
+#side-bar .nav-item {
+    padding-top: 0.1rem;
+}
+
+#side-bar .nav-menu-text {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+#side-bar .green-vertical-bar {
+    background-color: chartreuse;
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: var(--nav-item-height);
+    border-radius: 5px;
+}
+
+#side-bar .nav-menu {
+    padding-bottom: 0.7rem;
+}
+
+#side-bar .playlist-menu {
+    gap: 0.7rem;
+}
+
+#side-bar .add-playlist-menu:hover .add-playlist {
+    background-color: white;
+}
+
+#side-bar .add-playlist-menu:hover .add-playlist-text {
+    color: white;
+}
+
+#side-bar .add-playlist {
+    height: 35px;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    background-color: var(--gray);
+}
+
+#side-bar .add-playlist i {
+    width: 35px;
+    text-align: center;
+    color: black;
+}
+
+#side-bar .add-playlist-text {
+    font-size: 0.7rem;
+    margin-left: 0.6rem;
+    font-weight: bold;
+}
+
+#side-bar .playlist-menu li {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.4rem 0;
+}
+
+#side-bar .download-container {
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+#side-bar .dwn-load-icon {
+    width: 16px;
+}
+
+#side-bar .dwn-load-text {
+    padding-left: 0.7rem;
+}
+
+#side-bar .gray-line {
+    width: 90%;
+    height: 1px;
+    background-color: var(--gray);
+    margin-top: .4rem;
+    margin-bottom: 0.6rem;
+    opacity: 0.7;
+}
+
+#side-bar .user-icon {
+    width: 20px;
+    background-color: var(--gray);
+    border-radius: 50%;
+}
+
+#side-bar .user-name-text {
+    padding-left: 0.7rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+#side-bar.hided {
+    min-width: 60px;
+    display: none;
+}
+
+#app-container #side-bar.hided {
+    padding-left: 0;
+}
+
+#side-bar.hided .logo-container {
+    height: 50px;
+}
+
+#side-bar.hided .logo-container img {
+    width: 50%;
+}
+
+#side-bar.hided .icon-container .nav-icon {
+    height: 75%;
+}

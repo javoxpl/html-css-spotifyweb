@@ -1,0 +1,134 @@
+@media screen and (max-width: 1100px) {
+    .main-col {
+        flex-basis: 25%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-col {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #player-bar .left-side {
+        min-width: 160px;
+    }
+
+    #player-bar .right-side {
+        min-width: 160px;
+    }
+
+    .row-vertical-sm {
+        flex-direction: column;
+    }
+
+    #player-bar .right-side {
+        gap: 0.5rem;
+        justify-content: space-between;
+        padding-right: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    #player-bar {
+        gap: 1rem;
+    }
+
+    #player-bar .ctr-icon {
+        font-size: 1.1rem;
+    }
+
+    #player-bar .play-border {
+        height: 1.5rem;
+    }
+
+    #player-bar .player-controller .icons-bar {
+        gap: 1.5rem;
+    }
+
+    #player-bar .track-bar {
+        gap: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #side-bar {
+        display: none;
+    }
+
+    #side-bar .green-vertical-bar {
+        display: none;
+    }
+
+    #app-container #side-bar.hided {
+        display: flex;
+    }
+
+    .shrink-1-600 {
+        flex-shrink: 1;
+    }
+
+    .grow-0-600 {
+        flex-grow: 0;
+    }
+
+    #player-bar .left-side .img-container.width-600 {
+        width: 60px;
+    }
+
+    #player-bar {
+        gap: 0.5rem;
+    }
+
+    #player-bar .left-side {
+        min-width: 120px;
+    }
+
+    #player-bar .right-side {
+        min-width: 120px;
+    }
+
+    #player-bar .ctr-icon {
+        font-size: 0.9rem;
+    }
+
+    #player-bar .player-controller .icons-bar {
+        gap: 1rem;
+    }
+
+    #player-bar .play-border {
+        height: 1.3rem;
+    }
+
+    #player-bar .track-bar {
+        gap: 0.8rem;
+    }
+
+    #player-bar .left-side .song-name {
+        font-size: 0.6rem;
+        font-weight: bold;
+    }
+
+    #player-bar .left-side .artist-name {
+        font-size: 0.5rem;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-col {
+        flex-basis: 100%;
+    }
+
+    #player-bar .player-controller .icons-bar {
+        gap: 0.5rem;
+    }
+
+    #player-bar .track-bar {
+        gap: 0.5rem;
+    }
+
+    #player-bar .right-side {
+        min-width: 90px;
+    }
+}

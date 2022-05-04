@@ -1,0 +1,77 @@
+.row {
+    display: flex;
+}
+
+.row-horizontal {
+    flex-direction: row;
+}
+
+.row-vertical {
+    flex-direction: column;
+}
+
+.wrap-on {
+    flex-wrap: wrap;
+}
+
+.spc-btw {
+    justify-content: space-between;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+#main-content .recently-played img {
+    width: 100%;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.col {
+    flex-basis: 0;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+.grow-1 {
+    flex-grow: 1;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.relative-container {
+    position: relative;
+}
+
+.text-gray {
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.text-gray:hover {
+    color: var(--white);
+}
+
+.text-less-white {
+    color: rgb(237, 231, 231);
+    cursor: pointer;
+}
+
+.text-less-white:hover {
+    color: white;
+}

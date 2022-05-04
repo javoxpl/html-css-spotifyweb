@@ -1,0 +1,177 @@
+#player-bar {
+    background-color: var(--player-bg);
+    min-height: 90px;
+    gap: 2rem;
+}
+
+#player-bar .player-controller {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 450px;
+    gap: .6rem;
+}
+
+#player-bar .player-controller .icons-bar {
+    gap: 2rem;
+}
+
+#player-bar .left-side {
+    min-width: var(--side-bar-width);
+}
+
+#player-bar .right-side {
+    min-width: var(--side-bar-width);
+    flex-basis: auto;
+}
+
+#player-bar .ctr-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+#player-bar .play-border {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: 2rem;
+    border: 2px solid white;
+    transition: transform 0.3s;
+}
+
+#player-bar .play-border:hover {
+    transform: scale(1.2);
+}
+
+#player-bar .ctr-icon:hover {
+    transform: scale(1.2);
+}
+
+#player-bar .ctr-icon.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s, position 0.3s;
+}
+
+#player-bar .ctr-icon.play-icon:hover {
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+}
+
+#player-bar .track-bar {
+    gap: 1.5rem;
+}
+
+#player-bar .time-display {
+    font-size: 0.7rem;
+}
+
+#player-bar .time-bar {
+    background-color: var(--gray);
+    height: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#player-bar .hover-space:hover .progression-time-bar {
+    background-color: chartreuse;
+}
+
+#player-bar .hover-space:hover .progression-time-bar .white-dot{
+    display: block;
+}
+
+#player-bar .time-bar .progression-time-bar {
+    width: 20%;
+    background-color: var(--white);
+    height: 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: -1px;
+    transition: transform 0.3s;
+}
+
+#player-bar .left-side .song-name {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#player-bar .left-side .artist-name {
+    font-size: 0.6rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+#player-bar .left-side .artist-name:hover {
+    text-decoration: underline;
+}
+
+#player-bar .left-side .img-container {
+    padding: 10px;
+    width: 80px;
+    flex-basis: auto;
+}
+
+#player-bar .left-side .song-detail {
+    flex-basis: auto;
+}
+
+#player-bar .left-side .img-container img {
+    width: 100%;
+}
+
+#player-bar .left-side .icon-flex-container {
+    gap: 0.5rem;
+}
+
+#player-bar .right-side .volume-bar {
+    background-color: var(--gray);
+    height: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#player-bar .right-side .hover-space:hover .actual-volume-bar{
+    background-color: chartreuse;
+}
+
+#player-bar .right-side .hover-space:hover .actual-volume-bar .white-dot{
+    display: block;
+}
+
+#player-bar .right-side .volume-bar .actual-volume-bar {
+    width: 40%;
+    background-color: var(--white);
+    height: 5px;
+    border-radius: 500px;
+    position: absolute;
+    top: -1px;
+}
+
+#player-bar .right-side {
+    gap: 0.9rem;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.hover-space {
+    padding: 0.7rem 0;
+    cursor: pointer;
+}
+
+.white-dot {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    border-radius: 50%;
+}

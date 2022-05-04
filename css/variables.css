@@ -1,0 +1,15 @@
+:root {
+    --player-bg: #282828;
+    --side-bar-bg: #000000;
+    --main-content-bg: #141922;
+    --top-bar-bg: #080B11;
+
+    --white: #FFFFFF;
+    --gray: #c3bebe;
+
+    --side-bar-padding-left: 1rem;
+
+    --nav-item-height: 30px;
+
+    --side-bar-width: 200px;
+}

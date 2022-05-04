@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    color: var(--white);
+    font-size: 16px;
+}
+
+#app-container {
+    height: 100vh;
+}
+
+#main-content {
+    background-color: var(--main-content-bg);
+}
+
+#main-content .recently-played {
+    padding: 0.5rem;
+}
+
+#main-content h3{
+    padding-left: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#main-content p {
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+#main-content .main-nav-bar {
+    gap: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+#main-content .main-nav-bar .green-horizontal-line {
+    height: 2px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    background-color: chartreuse;
+}
+
+.main-col {
+    flex-basis: 16.6666666%;
+}
+
+.circle-img {
+    border-radius: 50%;
+}
+
+.play-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.card {
+    padding: .5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.img-container:hover .play-hover {
+    display: block;
+}
+
+.img-container:hover img {
+    filter: opacity(0.5);
+}
+
+.card .play-border {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: 5rem;
+    border: 8px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.card .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+.card .main-title {
+    font-weight: bold;
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.card .sub-title {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+#top-bar {
+    height: 65px;
+    background-color: var(--top-bar-bg);
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+}
+
+#top-bar .btn-container {
+    position: absolute;
+    top: 50%;
+    right: 1.2rem;
+    transform: translateY(-50%);
+}
+
+#top-bar .button {
+    font-size: 0.6rem;
+    display: inline-block;
+    border: 2px solid var(--white);
+    border-radius: 40px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: transform .3s;
+}
+
+#top-bar .btn-container .button:hover {
+    color: white;
+    opacity: 1;
+    transform: scale(1.2);
+}
